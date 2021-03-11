@@ -50,7 +50,7 @@ void Student::readStudent()
         std::cout << "Memory allocation problem " << std::endl;
         return;
     }
-    strcpy(buffer, name);
+    strcpy(name, buffer);
 
     std::cout << "Enter EGN of student: ";
     std::cin >> EGN;
@@ -182,7 +182,7 @@ void ListofStudents::highestAvgStudent()
     std::cout << name << ", grade: " << maxGrade << std::endl;
 }
 
-void ListofStudents::clearmemory()
+void ListofStudents::clearMemory()
 {
     for (int i = 0; i < cntOfStudents; i++)
     {

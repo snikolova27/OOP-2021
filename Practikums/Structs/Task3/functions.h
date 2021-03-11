@@ -1,5 +1,5 @@
 #ifndef FUNC_H
-#define FUNC_H;
+#define FUNC_H
 
 const int MAX_NUMBER_STUDENTS = 1000;
 
@@ -15,7 +15,7 @@ struct Student
 {
     char* name;
     char EGN [10];
-    char facultyNum [6];
+    char facultyNum [5];
     Grade grades[5];
 
     void readStudent();
@@ -32,7 +32,7 @@ struct ListofStudents
     void addStudent();
     void printMarchStudents();
     void highestAvgStudent();
-    void clearmemory();
+    void clearMemory();
 };
 
 char toUpper(char ch);
