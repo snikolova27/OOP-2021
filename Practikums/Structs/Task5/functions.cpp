@@ -45,7 +45,7 @@ void Rectangle::printRectangle()
         {
             if (i >= upperLeft.y && k >= upperLeft.x)
             {
-                rec[i][k] = '#';
+                rec[i][k] = '*';
             }
             else
             {
