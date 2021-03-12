@@ -30,8 +30,8 @@ void Rectangle::printRectangle()
         std::cout << "Coordinates should be positive numbers";
         return;
     }
-    int rows = (int)lowerRight.y;
-    int cols = (int)lowerRight.x;
+    int rows = (int)lowerRight.y + 1;
+    int cols = (int)lowerRight.x + 1;
 
     char **rec = new (std::nothrow) char *[rows];
     for (int i = 0; i < rows; i++)
@@ -58,7 +58,7 @@ void Rectangle::printRectangle()
     {
         for (int k = 0; k < cols; k++)
         {
-            std::cout << rec[i][k];
+            std::cout << rec[i][k] << " ";
         }
         std::cout << std::endl;
     }
