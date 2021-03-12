@@ -39,17 +39,26 @@ struct Student
 
 struct ListofStudents
 {
-    Student List [MAX_NUMBER_STUDENTS];
-    int cntOfStudents = 0;
+    Student List [MAX_NUMBER_STUDENTS]; //!< stores the details about each student
+    int cntOfStudents = 0;              //!< keeps track of the count of students in the list
 
+//! Function to add a new student to the list
     void addStudent();
+
+//! Function to print the names and average grades of students born in March
     void printMarchStudents();
+
+//! Function to print the names and the average grade of the student with the highest average grade
     void highestAvgStudent();
+
+//! Function to clear the allocated memory for the list of students
     void clearMemory();
 };
 
+//! Function to capitalise the first letters of each name of the student
 char toUpper(char ch);
 
+//! Function to print the menu at the start of the program
 void printMenu();
 
 #endif
