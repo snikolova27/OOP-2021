@@ -3,8 +3,8 @@
 
 int main()
 {
-    int optionNumber;
-    Library library;
+    int optionNumber; //!< used to determine which option of the menu to execute
+    Library library; 
 
     do
     {
