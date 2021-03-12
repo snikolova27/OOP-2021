@@ -34,7 +34,7 @@ void Rectangle::printRectangle()
     int cols = (int)lowerRight.x;
 
     char **rec = new (std::nothrow) char *[rows];
-    for (int i = 0; i < lowerRight.y; i++)
+    for (int i = 0; i < rows; i++)
     {
         rec[i] = new (std::nothrow) char[cols];
     }
