@@ -33,6 +33,11 @@ void Grade::getGrade()
 
     std::cout << "Enter grade for this subject; ";
     std::cin >> grade;
+    if(grade < 0)
+    {
+        std::cout << "Cannot enter a grade < 2";
+        return;
+    }
     std::cin.ignore();
 }
 

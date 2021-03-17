@@ -20,6 +20,11 @@ void Runner::getRunner()
     {
         std::cout << "Race №" << i + 1 << ": ";
         std::cin >> times[i];
+        if(times[i] < 0)
+        {
+            std::cout << "Number of seconds should be positive";
+            return;
+        }
     }
     std::cin.ignore();
 }
@@ -43,7 +48,7 @@ void Runner::formatName()
 
 double Runner::avgSpeed()
 {
-    int sumTimes = 0;
+    double sumTimes = 0;
     for (int i = 0; i < 12; i++)
     {
         sumTimes += times[i];

@@ -11,7 +11,7 @@ const int MAX_NUMBER_STUDENTS = 1000;  //!< stores the maximum number of student
 struct Grade
 {
     char* Subject;  //!< stores the name of the subject
-    short grade;    //!< stores the grade for the subject entered
+    double grade;    //!< stores the grade for the subject entered
 
 //! Function to get the grade for said subject
     void getGrade();    
