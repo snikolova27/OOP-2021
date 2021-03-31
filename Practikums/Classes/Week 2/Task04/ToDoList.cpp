@@ -50,7 +50,7 @@ Task ToDoList::popTask()
 
     for (int i = 0; i < m_size - 1; i++)
     {
-        result = m_tasks[i + 1];
+        m_tasks[i] = m_tasks[i + 1];
     }
     if (!isEmpty())
     {
