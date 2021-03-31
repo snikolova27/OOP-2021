@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/home/sonya/Uni/OOP/OOP/Seminars/Classes/Task01/build",
+  "command": "/bin/clang++-10     -fsanitize=address,undefined -g   -o CMakeFiles/task01.dir/main.cpp.o -c /home/sonya/Uni/OOP/OOP/Seminars/Classes/Task01/main.cpp",
+  "file": "/home/sonya/Uni/OOP/OOP/Seminars/Classes/Task01/main.cpp"
+},
+{
+  "directory": "/home/sonya/Uni/OOP/OOP/Seminars/Classes/Task01/build",
+  "command": "/bin/clang++-10     -fsanitize=address,undefined -g   -o CMakeFiles/task01.dir/Person.cpp.o -c /home/sonya/Uni/OOP/OOP/Seminars/Classes/Task01/Person.cpp",
+  "file": "/home/sonya/Uni/OOP/OOP/Seminars/Classes/Task01/Person.cpp"
+},
+{
+  "directory": "/home/sonya/Uni/OOP/OOP/Seminars/Classes/Task01/build",
+  "command": "/bin/clang++-10     -fsanitize=address,undefined -g   -o CMakeFiles/task01.dir/Utils.cpp.o -c /home/sonya/Uni/OOP/OOP/Seminars/Classes/Task01/Utils.cpp",
+  "file": "/home/sonya/Uni/OOP/OOP/Seminars/Classes/Task01/Utils.cpp"
+}
+]

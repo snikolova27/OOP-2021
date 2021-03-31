@@ -29,7 +29,3 @@ void Grades::input()
         return;
     }
 }
-void Grades::clearDynamic()
-{
-    
-}

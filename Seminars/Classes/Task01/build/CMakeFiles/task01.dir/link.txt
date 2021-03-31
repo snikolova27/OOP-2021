@@ -1,0 +1,1 @@
+/bin/clang++-10   -fsanitize=address,undefined -g  -rdynamic CMakeFiles/task01.dir/main.cpp.o CMakeFiles/task01.dir/Person.cpp.o CMakeFiles/task01.dir/Utils.cpp.o  -o task01 
