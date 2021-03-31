@@ -1,33 +1,22 @@
 #include "Utils.h"
-#include <iostream>
-#include <cstring>
 
-const int MAX_TITLE_LEN = 32;
-const int MAX_DESCRIPTION_LEN = 128;
-
-char *inputTitle()
+char *inputName()
 {
-    char buffer[MAX_TITLE_LEN];
-    std::cout << 'enter title of task: ';
-    std::cin.getline(buffer, MAX_TITLE_LEN);
+    char buffer[100];
+    std::cout << "Enter name: ";
+    std::cin.getline(buffer, 100);
     size_t len = strlen(buffer);
-    char* title = new(std::nothrow) char [len+1];
-    strcpy(title, buffer);
-
+    char *name = new (std::nothrow) char[len + 1];
+    strcpy(name, buffer);
+    return name;
 }
-
-char *inputDesc()
+void clearDynamic( char* str)
 {
-    char buffer[MAX_DESCRIPTION_LEN];
-    std::cout << 'enter description of task: ';
-    std::cin.getline(buffer, MAX_DESCRIPTION_LEN);
-    size_t len = strlen(buffer);
-    char* desc = new(std::nothrow) char [len+1];
-    strcpy(desc, buffer);
-
+    delete[] str;
 }
-
-void clearDynamic(char* string)
+char* copyDynStr( const char* str)
 {
-    delete[] string;
+    char* res = new (std::nothrow) char [strlen(str) + 1];
+    strcpy(res, str);
+    return res;
 }

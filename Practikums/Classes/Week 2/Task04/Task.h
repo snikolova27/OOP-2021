@@ -3,15 +3,23 @@
 
 class Task
 {
-    private:
-    char* m_title;
-    char* m_description;
+private:
+    char *m_title;
+    char *m_description;
 
-    public:
+    void deallocate();
+
+public:
     Task();
-    Task(char* title, char* desc);
-    char* getTitle();
-    char* getDescription();
+    Task(const char *title, const char *desc);
+
+    void setTitle(const char *title);
+    void setDescription(const char *desc);
+
+    char *getTitle() const;
+    char *getDescription() const;
+
+    ~Task();
 };
 
 #endif
