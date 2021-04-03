@@ -61,8 +61,8 @@ void Time::setMinute(const int minute)
     }
     else
     {
-        m_minute = 0;
-        std::cout << "Minutes should be between 0 and 59" << std::endl;
+    m_minute = 0;
+    std::cout << "Minutes should be between 0 and 59" << std::endl;
     }
 }
 int Time::getMinute() const

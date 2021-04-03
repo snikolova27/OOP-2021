@@ -1,4 +1,5 @@
 #include "Time.h"
+#include <iostream>
 
 int main()
 {
@@ -15,4 +16,5 @@ int main()
     t3.print();
     t4.print();
     t5.print();
+    std::cout << std::boolalpha << (t1 > t2) << std::endl;
 }
