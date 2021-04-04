@@ -29,7 +29,10 @@ int main()
 
     best.print();
 
+    if(machines)
+    {
     delete[] machines;
+    }
 
 
 }

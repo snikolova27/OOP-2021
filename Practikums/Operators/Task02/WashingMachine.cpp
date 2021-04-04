@@ -16,8 +16,14 @@ void WashingMachine::copy(const WashingMachine &other)
 
 void WashingMachine ::erase()
 {
-    delete[] manufacturer;
-    delete[] model;
+    if (manufacturer)
+    {
+        delete[] manufacturer;
+    }
+    if (model)
+    {
+        delete[] model;
+    }
 }
 
 //--------------------- constructors ----------------------
@@ -49,7 +55,10 @@ WashingMachine::WashingMachine(const WashingMachine &other)
 
 WashingMachine::~WashingMachine()
 {
-    erase();
+    if (manufacturer && model)
+    {
+        erase();
+    }
 }
 
 //------------------------ setters ------------------------
@@ -82,7 +91,7 @@ void WashingMachine::setCapacity(const int _capacity)
 
 void WashingMachine::setElConsumption(const double _elConsumption)
 {
-    this->elConsumption - _elConsumption;
+    this->elConsumption = _elConsumption;
 }
 
 void WashingMachine::setWaterConsumption(const int _waterConsumption)
@@ -135,11 +144,32 @@ bool WashingMachine::operator>(const WashingMachine &other)
 }
 void WashingMachine::inputWashingMachine()
 {
-       
     std::cout << "Enter name of manufacturer: ";
-    this->setManufacturer(inputStr());
+    char *temp = inputStr();
+    if (temp)
+    {
+        this->setManufacturer(temp);
+        delete[] temp;
+    }
+    else
+    {
+        std::cout << "Problem allocating memory" << std::endl;
+        delete[] temp;
+    }
+
     std::cout << "Enter model of washing machine: ";
-    this->setModel(inputStr());
+    char *temp2 = inputStr();
+    if (temp2)
+    {
+        this->setModel(temp2);
+        delete[] temp2;
+    }
+    else
+    {
+        std::cout << "Problem allocating memory" << std::endl;
+        delete[] temp2;
+    }
+
     std::cout << "Enter capacity in kg: ";
     std::cin >> this->capacity;
     std::cout << "Enter electro consumption: ";

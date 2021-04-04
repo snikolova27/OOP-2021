@@ -69,3 +69,63 @@ void Student::clearMemory()
 {
     delete[] name;
 }
+
+char* Student::getName()
+{
+    return this->name;
+}
+
+char* Student::getFN()
+{
+    return this->facultyNum;
+}
+
+void Student::setName(const char* wantedName)
+{
+    size_t size = strlen(wantedName);
+    this->name = new(std::nothrow) char[size + 1];
+    if (!this->name)
+    {
+        std::cout << "Memory problem!" << std::endl;
+        return;
+    }
+    strcpy(this->name, wantedName);
+    this->name[size] = '\0';
+}
+
+void Student::setEGN(const char* wantedEGN)
+{
+    strcpy(this->EGN, wantedEGN);
+    this->EGN[strlen(wantedEGN)] = '\0';
+}
+
+void Student::setFacultyNumber(const char* wantedFN)
+{
+    strcpy(this->facultyNum, wantedFN);
+    this->facultyNum[strlen(wantedFN)] = '\0';
+}
+
+void Student::setGrades(Grades* wantedGrades)
+{
+    for (int i = 0; i < 5; ++i)
+    {
+        size_t size = strlen(wantedGrades[i].subject);
+        this->grades[i].subject = new(std::nothrow) char[size + 1];
+        if (!this->grades[i].subject)
+        {
+            std::cout << "Memory problem!" << std::endl;
+            return;
+        }
+        strcpy(this->grades[i].subject, wantedGrades[i].subject);
+        this->grades[i].subject[size] = '\0';
+        
+        this->grades[i].grade = wantedGrades[i].grade;
+    }
+}
+void Student::copyStudent(Student& student)
+{
+    student.setName(this->name);
+    student.setEGN(this->EGN);
+    student.setFacultyNumber(this->facultyNum);
+    student.setGrades(this->grades);
+}

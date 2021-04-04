@@ -1,0 +1,1 @@
+/bin/clang++-10   -fsanitize=address,undefined -g  -rdynamic CMakeFiles/WashingMachines.dir/main.cpp.o CMakeFiles/WashingMachines.dir/utils.cpp.o CMakeFiles/WashingMachines.dir/WashingMachine.cpp.o  -o WashingMachines 

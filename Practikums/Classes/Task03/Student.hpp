@@ -18,6 +18,18 @@ private:
     void printFacNumAndGrades();
     double avgGrade();
     void clearMemory();
+
+    void copyStudent(Student& student);
+
+    char* getName();
+    char* getFN();
+
+    void setName(const char* wantedName);
+    void setEGN(const char* wantedEGN);
+    void setFacultyNumber(const char* wantedFN);
+    void setGrades(Grades* wantedGrades);
+
+    ~Student();
     
 };
 #endif

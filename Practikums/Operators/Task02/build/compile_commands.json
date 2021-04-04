@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/home/sonya/Uni/OOP/OOP/Practikums/Operators/Task02/build",
+  "command": "/bin/clang++-10     -fsanitize=address,undefined -g   -o CMakeFiles/WashingMachines.dir/main.cpp.o -c /home/sonya/Uni/OOP/OOP/Practikums/Operators/Task02/main.cpp",
+  "file": "/home/sonya/Uni/OOP/OOP/Practikums/Operators/Task02/main.cpp"
+},
+{
+  "directory": "/home/sonya/Uni/OOP/OOP/Practikums/Operators/Task02/build",
+  "command": "/bin/clang++-10     -fsanitize=address,undefined -g   -o CMakeFiles/WashingMachines.dir/utils.cpp.o -c /home/sonya/Uni/OOP/OOP/Practikums/Operators/Task02/utils.cpp",
+  "file": "/home/sonya/Uni/OOP/OOP/Practikums/Operators/Task02/utils.cpp"
+},
+{
+  "directory": "/home/sonya/Uni/OOP/OOP/Practikums/Operators/Task02/build",
+  "command": "/bin/clang++-10     -fsanitize=address,undefined -g   -o CMakeFiles/WashingMachines.dir/WashingMachine.cpp.o -c /home/sonya/Uni/OOP/OOP/Practikums/Operators/Task02/WashingMachine.cpp",
+  "file": "/home/sonya/Uni/OOP/OOP/Practikums/Operators/Task02/WashingMachine.cpp"
+}
+]
