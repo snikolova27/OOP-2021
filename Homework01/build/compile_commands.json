@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/sonya/Uni/OOP/OOP/Homework01/build",
+  "command": "/bin/clang++-10     -fsanitize=address,undefined -g   -o CMakeFiles/Homework.dir/main.cpp.o -c /home/sonya/Uni/OOP/OOP/Homework01/main.cpp",
+  "file": "/home/sonya/Uni/OOP/OOP/Homework01/main.cpp"
+}
+]
