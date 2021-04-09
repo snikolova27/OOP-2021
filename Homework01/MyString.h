@@ -8,6 +8,10 @@ private:
     char *string;
     size_t len;
 
+ //------------ helper functions ------------
+    void deallocateMemory();
+    char* copyDynStr(const char* str);
+
 public:
     //------------ constructors ------------
     MyString();
@@ -44,10 +48,6 @@ public:
     const char* c_str() const ;
     bool operator==(const MyString &rhs) const;
     bool operator<(const MyString &rhs) const;
-
-    //------------ helper functions ------------
-    void deallocateMemory();
-    char* copyDynStr(const char* str);
 
     //------------ destructor ------------
     ~MyString();

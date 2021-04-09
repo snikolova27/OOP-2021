@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/sonya/Uni/OOP/OOP/Practikums/Operators/Task02/WashingMachine.cpp
+/home/sonya/Uni/OOP/OOP/Practikums/Operators/Task02/WashingMachine.h
+
+/home/sonya/Uni/OOP/OOP/Practikums/Operators/Task02/main.cpp
 WashingMachine.h
 /home/sonya/Uni/OOP/OOP/Practikums/Operators/Task02/WashingMachine.h
 utils.h
 /home/sonya/Uni/OOP/OOP/Practikums/Operators/Task02/utils.h
 iostream
 -
-
-/home/sonya/Uni/OOP/OOP/Practikums/Operators/Task02/WashingMachine.h
 
 /home/sonya/Uni/OOP/OOP/Practikums/Operators/Task02/utils.h
 cstring
