@@ -229,6 +229,7 @@ MyString &MyString::operator+=(const MyString &rhs)
     if (!temp)
     {
         std::cout << "Problem allocating memory" << std::endl;
+        return *this;
     }
     strcpy(temp, this->string);
     this->len += rhs.len;
