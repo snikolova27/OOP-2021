@@ -8,5 +8,15 @@
   "directory": "/home/sonya/Uni/OOP/OOP/Homework01/build",
   "command": "/bin/clang++-10     -fsanitize=address,undefined -g   -o CMakeFiles/Homework.dir/MyString.cpp.o -c /home/sonya/Uni/OOP/OOP/Homework01/MyString.cpp",
   "file": "/home/sonya/Uni/OOP/OOP/Homework01/MyString.cpp"
+},
+{
+  "directory": "/home/sonya/Uni/OOP/OOP/Homework01/build",
+  "command": "/bin/clang++-10     -fsanitize=address,undefined -g   -o CMakeFiles/Homework.dir/catch2.cpp.o -c /home/sonya/Uni/OOP/OOP/Homework01/catch2.cpp",
+  "file": "/home/sonya/Uni/OOP/OOP/Homework01/catch2.cpp"
+},
+{
+  "directory": "/home/sonya/Uni/OOP/OOP/Homework01/build",
+  "command": "/bin/clang++-10     -fsanitize=address,undefined -g   -o CMakeFiles/Homework.dir/tests_MyString.cpp.o -c /home/sonya/Uni/OOP/OOP/Homework01/tests_MyString.cpp",
+  "file": "/home/sonya/Uni/OOP/OOP/Homework01/tests_MyString.cpp"
 }
 ]

@@ -547,6 +547,33 @@ MyString.cpp.s:
 	$(MAKE) -f CMakeFiles/Homework.dir/build.make CMakeFiles/Homework.dir/MyString.cpp.s
 .PHONY : MyString.cpp.s
 
+catch2.o: catch2.cpp.o
+
+.PHONY : catch2.o
+
+# target to build an object file
+catch2.cpp.o:
+	$(MAKE) -f CMakeFiles/Homework.dir/build.make CMakeFiles/Homework.dir/catch2.cpp.o
+.PHONY : catch2.cpp.o
+
+catch2.i: catch2.cpp.i
+
+.PHONY : catch2.i
+
+# target to preprocess a source file
+catch2.cpp.i:
+	$(MAKE) -f CMakeFiles/Homework.dir/build.make CMakeFiles/Homework.dir/catch2.cpp.i
+.PHONY : catch2.cpp.i
+
+catch2.s: catch2.cpp.s
+
+.PHONY : catch2.s
+
+# target to generate assembly for a file
+catch2.cpp.s:
+	$(MAKE) -f CMakeFiles/Homework.dir/build.make CMakeFiles/Homework.dir/catch2.cpp.s
+.PHONY : catch2.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -573,6 +600,33 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) -f CMakeFiles/Homework.dir/build.make CMakeFiles/Homework.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+tests_MyString.o: tests_MyString.cpp.o
+
+.PHONY : tests_MyString.o
+
+# target to build an object file
+tests_MyString.cpp.o:
+	$(MAKE) -f CMakeFiles/Homework.dir/build.make CMakeFiles/Homework.dir/tests_MyString.cpp.o
+.PHONY : tests_MyString.cpp.o
+
+tests_MyString.i: tests_MyString.cpp.i
+
+.PHONY : tests_MyString.i
+
+# target to preprocess a source file
+tests_MyString.cpp.i:
+	$(MAKE) -f CMakeFiles/Homework.dir/build.make CMakeFiles/Homework.dir/tests_MyString.cpp.i
+.PHONY : tests_MyString.cpp.i
+
+tests_MyString.s: tests_MyString.cpp.s
+
+.PHONY : tests_MyString.s
+
+# target to generate assembly for a file
+tests_MyString.cpp.s:
+	$(MAKE) -f CMakeFiles/Homework.dir/build.make CMakeFiles/Homework.dir/tests_MyString.cpp.s
+.PHONY : tests_MyString.cpp.s
 
 # Help Target
 help:
@@ -617,9 +671,15 @@ help:
 	@echo "... MyString.o"
 	@echo "... MyString.i"
 	@echo "... MyString.s"
+	@echo "... catch2.o"
+	@echo "... catch2.i"
+	@echo "... catch2.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... tests_MyString.o"
+	@echo "... tests_MyString.i"
+	@echo "... tests_MyString.s"
 .PHONY : help
 
 

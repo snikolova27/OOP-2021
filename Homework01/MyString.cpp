@@ -9,11 +9,16 @@ void MyString::deallocateMemory()
     if (this->string)
     {
         delete[] this->string;
+        this->string = nullptr;
     }
 }
 
 char *MyString::copyDynStr(const char *str)
 {
+    if (str == nullptr)
+    {
+        return nullptr;
+    }
     char *res = new (std::nothrow) char[strlen(str) + 1];
     if (!res)
     {
@@ -25,6 +30,12 @@ char *MyString::copyDynStr(const char *str)
 }
 void MyString::copy(const MyString &other)
 {
+    if (other.string == nullptr)
+    {
+        this->string = nullptr;
+        this->len = 0;
+        return;
+    }
     this->string = new (std::nothrow) char[other.len + 1];
     if (this->string)
     {
@@ -49,7 +60,14 @@ MyString::MyString()
 MyString::MyString(const char *str)
 {
     this->string = copyDynStr(str);
-    this->len = strlen(string);
+    if (this->string == nullptr)
+    {
+        this->len = 0;
+    }
+    else
+    {
+        this->len = strlen(string);
+    }
 }
 
 MyString::MyString(const MyString &other)
@@ -134,7 +152,7 @@ const char &MyString::back() const
 }
 bool MyString::empty() const
 {
-    return this->string == 0;
+    return this->len == 0;
 }
 void MyString::clear()
 {
@@ -150,7 +168,7 @@ void MyString::push_back(char c)
         {
             this->string[0] = c;
             this->string[1] = '\0';
-            this->len = 2;
+            this->len = 1;
         }
         else
         {
@@ -177,8 +195,8 @@ void MyString::push_back(char c)
 
 void MyString::pop_back()
 {
-    assert(!this->empty());
-    if (this->len == 1)
+    //assert(!this->empty());
+    if (this->len == 1 || this->len == 0)
     {
         this->clear();
         return;
@@ -278,11 +296,11 @@ bool MyString::operator==(const MyString &rhs) const
 }
 bool MyString::operator<(const MyString &rhs) const
 {
-    if(this->string == nullptr)
+    if (this->string == nullptr)
     {
-        return  1;
+        return 1;
     }
-    if(rhs.string == nullptr)
+    if (rhs.string == nullptr)
 
     {
         return 0;
