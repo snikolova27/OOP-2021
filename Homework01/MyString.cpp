@@ -88,6 +88,11 @@ void MyString::setString(const char *str)
 {
     //this->deallocateMemory();
     this->string = copyDynStr(str);
+    if (this->string == nullptr)
+    {
+        this->len = 0;
+        return;
+    }
     this->len = strlen(str);
 }
 
@@ -118,16 +123,6 @@ const char &MyString::at(size_t pos) const
     {
         std::cout << "No such position" << std::endl;
     }
-    return this->string[pos];
-}
-char &MyString::operator[](size_t pos)
-{
-    assert(pos < this->len);
-    return this->string[pos];
-}
-const char &MyString::operator[](size_t pos) const
-{
-    assert(pos < this->len);
     return this->string[pos];
 }
 char &MyString::front()
@@ -215,6 +210,17 @@ void MyString::pop_back()
     this->setString(temp);
     delete[] temp;
 }
+//----------- operator overloading ------------
+char &MyString::operator[](size_t pos)
+{
+    assert(pos < this->len);
+    return this->string[pos];
+}
+const char &MyString::operator[](size_t pos) const
+{
+    assert(pos < this->len);
+    return this->string[pos];
+}
 MyString &MyString::operator=(const MyString &other)
 {
     if (this != &other)
@@ -231,7 +237,7 @@ MyString &MyString::operator+=(char c)
 }
 MyString &MyString::operator+=(const MyString &rhs)
 {
-    if (!this->string)
+    if (!this->string || this->len == 0)
     {
         *this = rhs;
         return *this;

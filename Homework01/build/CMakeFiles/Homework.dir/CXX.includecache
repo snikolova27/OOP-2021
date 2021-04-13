@@ -6,9 +6,21 @@
 
 #IncludeRegexTransform: 
 
+/home/sonya/Uni/OOP/OOP/Homework01/MyString.cpp
+MyString.h
+/home/sonya/Uni/OOP/OOP/Homework01/MyString.h
+cstring
+-
+cassert
+-
+
 /home/sonya/Uni/OOP/OOP/Homework01/MyString.h
 iostream
 -
+
+/home/sonya/Uni/OOP/OOP/Homework01/Vehicle.h
+MyString.h
+/home/sonya/Uni/OOP/OOP/Homework01/MyString.h
 
 /home/sonya/Uni/OOP/OOP/Homework01/catch2.hpp
 chrono
@@ -372,6 +384,16 @@ iosfwd
 string
 -
 vector
+-
+cstring
+-
+
+/home/sonya/Uni/OOP/OOP/Homework01/main.cpp
+MyString.h
+/home/sonya/Uni/OOP/OOP/Homework01/MyString.h
+Vehicle.h
+/home/sonya/Uni/OOP/OOP/Homework01/Vehicle.h
+iostream
 -
 cstring
 -

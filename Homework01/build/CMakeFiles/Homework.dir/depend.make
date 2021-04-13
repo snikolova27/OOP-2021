@@ -8,6 +8,7 @@ CMakeFiles/Homework.dir/catch2.cpp.o: ../catch2.cpp
 CMakeFiles/Homework.dir/catch2.cpp.o: ../catch2.hpp
 
 CMakeFiles/Homework.dir/main.cpp.o: ../MyString.h
+CMakeFiles/Homework.dir/main.cpp.o: ../Vehicle.h
 CMakeFiles/Homework.dir/main.cpp.o: ../main.cpp
 
 CMakeFiles/Homework.dir/tests_MyString.cpp.o: ../MyString.h

@@ -6,7 +6,7 @@ class MyString
 {
 private:
     char *string;
-    size_t len;
+    std::size_t len;
 
     //------------ helper functions ------------
     void deallocateMemory();
@@ -24,14 +24,11 @@ public:
 
     //------------ getters ------------
     const char *c_str() const;
-    size_t size() const;
-    
-    //------------ class functions ------------
+    std::size_t size() const;
 
-    char &at(size_t pos);
-    const char &at(size_t pos) const;
-    char &operator[](size_t pos);
-    const char &operator[](size_t pos) const;
+    //------------ class functions ------------
+    char &at(std::size_t pos);
+    const char &at(std::size_t pos) const;
     char &front();
     const char &front() const;
     char &back();
@@ -40,6 +37,10 @@ public:
     void clear();
     void push_back(char c);
     void pop_back();
+
+    //----------- operator overloading ------------
+    char &operator[](std::size_t pos);
+    const char &operator[](std::size_t pos) const;
     MyString &operator=(const MyString &other);
     MyString &operator+=(char c);
     MyString &operator+=(const MyString &rhs);
