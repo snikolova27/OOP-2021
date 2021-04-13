@@ -81,9 +81,9 @@ std::size_t Garage::getSize() const
 }
 //------------ destructor ------------
 Garage::~Garage()
-[
+{
     this->deallocate();
-]
+}
 //------------ class functions ------------
 
 //----------- operator overloading ------------
