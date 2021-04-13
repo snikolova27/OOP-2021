@@ -10,6 +10,7 @@ class Garage
 private:
     std::size_t capacity;
     std::size_t size;
+    int cntOfCars;
     Vehicle *cars;
 
     void resize();
@@ -32,7 +33,7 @@ public:
     void clear();
     const Vehicle *find(const char *_licensePlate) const;
 
-  
+  //----------- operator overloading ------------
     Garage &operator=(const Garage &other);
     const Vehicle &operator[](std::size_t pos) const; //assert pos
 
