@@ -11,10 +11,10 @@ void Garage::deallocate()
 }
 void Garage::resize()
 {
-    Vehicle *old = this->cars;
+    Vehicle **old = this->cars;
 
     this->size *= RESIZE_STEP;
-    this->cars = new (std::nothrow) Vehicle[this->size];
+    this->cars = new (std::nothrow) Vehicle*[this->size];
 
     if (!this->cars)
     {
@@ -37,7 +37,7 @@ void Garage::copy(const Garage &other)
         this->cntOfCars = 0;
         return;
     }
-    this->cars = new (std::nothrow) Vehicle[other.size];
+    this->cars = new (std::nothrow) Vehicle*[other.size];
     if (this->cars)
     {
         for (int i = 0; i < other.size; i++)
@@ -58,7 +58,7 @@ Garage::Garage(std::size_t size)
 {
     if (size)
     {
-        this->cars = new (std::nothrow) Vehicle[size];
+        this->cars = new (std::nothrow) Vehicle*[size];
         if (this->cars)
         {
             this->capacity = size;
@@ -92,12 +92,12 @@ void Garage ::insert(Vehicle &v) //strong exception guarantee
 {
     if (this->capacity >= v.space())
     {
-        this->cars[this->cntOfCars++] = v;
+        this->cars[this->cntOfCars++] = &v;
     }
     else
     {
         this->resize();
-        this->cars[this->cntOfCars++] = v;
+        this->cars[this->cntOfCars++] = &v;
     }
 }
 

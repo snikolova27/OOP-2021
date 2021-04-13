@@ -11,7 +11,7 @@ private:
     std::size_t capacity;
     std::size_t size;
     int cntOfCars;
-    Vehicle *cars;
+    Vehicle **cars;
 
     void resize();
     void deallocate();
@@ -24,7 +24,7 @@ public:
 
     //------------ getters ------------
     std::size_t getSize() const;
-    
+
     //------------ class functions ------------
     void insert(Vehicle &v); //strong exception guarantee
     void erase(const char *_licensePlate);
@@ -33,7 +33,7 @@ public:
     void clear();
     const Vehicle *find(const char *_licensePlate) const;
 
-  //----------- operator overloading ------------
+    //----------- operator overloading ------------
     Garage &operator=(const Garage &other);
     const Vehicle &operator[](std::size_t pos) const; //assert pos
 
