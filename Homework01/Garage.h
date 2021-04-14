@@ -10,7 +10,7 @@ private:
     int cntOfVehicles;
     Vehicle **vehicles;
 
-//------------ private methods ------------
+    //------------ private methods ------------
     void deallocate();
     void copy(const Garage &other);
 
@@ -20,7 +20,7 @@ public:
     Garage(const Garage &other);
 
     //------------ getters ------------
-    std::size_t getSize() const;
+    std::size_t getSize() const;  //return count of vehicles in the garage
 
     //------------ class functions ------------
     void insert(Vehicle &v); //strong exception guarantee
@@ -33,7 +33,7 @@ public:
     //----------- operator overloading ------------
     Garage &operator=(const Garage &other);
     const Vehicle &operator[](std::size_t pos) const; //assert pos
-    friend std::ostream& operator << (std::ostream& out, const Garage& garage);
+    friend std::ostream &operator<<(std::ostream &out, const Garage &garage);
 
     //------------ destructor ------------
     ~Garage();

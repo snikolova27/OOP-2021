@@ -65,8 +65,15 @@ Garage::Garage(std::size_t size)
         {
             vehicles[i] = nullptr;
         }
+        std::cout << "Garage with a capacity of " << size << "has been created." << std::endl;
     }
-    std::cout << "Garage with a capacity of " << size << "has been created." << std::endl;
+    else
+    {
+        this->vehicles = nullptr;
+        this->capacity = 0;
+        this->used = 0;
+        this->cntOfVehicles = 0;
+    }
 }
 
 //------------ constructors ------------
@@ -147,7 +154,7 @@ void Garage::erase(const char *_licensePlate)
     this->vehicles[this->cntOfVehicles - 1] = nullptr;
     this->cntOfVehicles -= 1;
 
-    std::cout << "The vehicle with " << _licensePlate << " licesence plate has been taken out of the garage" << std::endl;
+    std::cout << "The vehicle with " << _licensePlate << " license plate has been taken out of the garage" << std::endl;
 }
 const Vehicle &Garage::at(std::size_t pos) const
 {
@@ -166,6 +173,10 @@ bool Garage::empty() const
 }
 void Garage::clear()
 {
+    if (this->cntOfVehicles == 0)
+    {
+        return;
+    }
     for (size_t i = 0; i < this->capacity; i++)
     {
         this->vehicles[i] = nullptr;
@@ -177,6 +188,10 @@ void Garage::clear()
 }
 const Vehicle *Garage::find(const char *_licensePlate) const
 {
+    if (_licensePlate == nullptr || strcmp(_licensePlate, "") == 0)
+    {
+        return nullptr;
+    }
     int searchIdx = -1;
 
     for (size_t i = 0; i < this->cntOfVehicles; i++)
@@ -224,7 +239,9 @@ std::ostream &operator<<(std::ostream &out, const Garage &garage) //used for eas
             std::cout << "There are " << garage.capacity - garage.used << " free parking space(s) in the garage" << std::endl;
         }
 
-        std::cout << "=============" << "Vehichles parked in the garage" << "=============" << std::endl;
+        std::cout << "============="
+                  << "Vehichles parked in the garage"
+                  << "=============" << std::endl;
 
         for (size_t i = 0; i < garage.cntOfVehicles; i++)
         {
