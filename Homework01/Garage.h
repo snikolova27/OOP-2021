@@ -2,18 +2,15 @@
 #define GARAGE_H
 #include "Vehicle.h"
 
-const int INITIAL_CAPACITY = 2;
-const int RESIZE_STEP = 2;
-
 class Garage
 {
 private:
-    std::size_t capacity;
-    std::size_t size;
-    int cntOfCars;
-    Vehicle **cars;
+    std::size_t capacity; // max spaces for vehicles to occupy
+    std::size_t used;
+    int cntOfVehicles;
+    Vehicle **vehicles;
 
-    void resize();
+//------------ private methods ------------
     void deallocate();
     void copy(const Garage &other);
 
@@ -36,6 +33,7 @@ public:
     //----------- operator overloading ------------
     Garage &operator=(const Garage &other);
     const Vehicle &operator[](std::size_t pos) const; //assert pos
+    friend std::ostream& operator << (std::ostream& out, const Garage& garage);
 
     //------------ destructor ------------
     ~Garage();

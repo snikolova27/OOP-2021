@@ -8,7 +8,7 @@ private:
     char *string;
     std::size_t len;
 
-    //------------ helper functions ------------
+   //------------ private methods ------------
     void deallocateMemory();
     char *copyDynStr(const char *str);
     void copy(const MyString &other);

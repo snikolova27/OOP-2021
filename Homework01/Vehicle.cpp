@@ -21,3 +21,14 @@ std::size_t Vehicle::space() const
 {
     return this->parkingSpace;
 }
+
+//----------- operator overloading ------------
+//used for printing the information about the vehicle
+std::ostream &operator<<(std::ostream &out, const Vehicle &v)
+{
+    std::cout << "License plate: " << v.registration() << std::endl;
+    std::cout << "Description: " << v.description() << std::endl;
+    std::cout << "Needed parking space: " << v.space() << std::endl;
+
+    return out;
+}

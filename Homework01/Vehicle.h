@@ -17,5 +17,8 @@ public:
     const char *registration() const;
     const char *description() const;
     std::size_t space() const;
+
+    //----------- operator overloading ------------
+    friend std::ostream &operator<<(std::ostream &out, const Vehicle &v); 
 };
 #endif

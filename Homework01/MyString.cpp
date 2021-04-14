@@ -2,7 +2,7 @@
 #include <cstring>
 #include <cassert>
 
-//------------ helper functions ------------
+//------------ private methods ------------
 // Functions used for executing the class and costructor/destructor functions easier
 void MyString::deallocateMemory()
 {
