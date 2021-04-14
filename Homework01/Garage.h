@@ -10,20 +10,21 @@ class Garage
 private:
     std::size_t capacity;
     std::size_t size;
-    Vehicle *cars;
+    int cntOfCars;
+    Vehicle **cars;
 
     void resize();
     void deallocate();
     void copy(const Garage &other);
 
 public:
-    //------------ constructor ------------
-    Garage(std::size_t capacity);
+    //------------ constructors ------------
+    Garage(std::size_t size);
     Garage(const Garage &other);
 
     //------------ getters ------------
-    std::size_t size() const;
-    
+    std::size_t getSize() const;
+
     //------------ class functions ------------
     void insert(Vehicle &v); //strong exception guarantee
     void erase(const char *_licensePlate);
