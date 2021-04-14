@@ -19,8 +19,12 @@ char *MyString::copyDynStr(const char *str)
     {
         return nullptr;
     }
-    char *res = new (std::nothrow) char[strlen(str) + 1];
-    if (!res)
+    char *res;
+    try
+    {
+        res = new char[strlen(str) + 1];
+    }
+    catch (std::bad_alloc &e)
     {
         std::cout << "Problem allocating memory";
         return nullptr;
@@ -36,17 +40,17 @@ void MyString::copy(const MyString &other)
         this->len = 0;
         return;
     }
-    this->string = new (std::nothrow) char[other.len + 1];
-    if (this->string)
+    try
     {
-        strcpy(this->string, other.string);
-        this->len = other.len;
+        this->string = new char[other.len + 1];
     }
-    else
+    catch (std::bad_alloc &e)
     {
         std::cout << "Problem allocating memory" << std::endl;
         return;
     }
+    strcpy(this->string, other.string);
+    this->len = other.len;
 }
 
 //------------ constructors ------------
@@ -158,26 +162,32 @@ void MyString::push_back(char c)
 {
     if (!this->string)
     {
-        this->string = new (std::nothrow) char[2];
-        if (this->string)
+        try
         {
-            this->string[0] = c;
-            this->string[1] = '\0';
-            this->len = 1;
+            this->string = new char[2];
         }
-        else
+        catch (std::bad_alloc &e)
         {
             std::cout << "Problem allocating memory" << std::endl;
+            return;
         }
+
+        this->string[0] = c;
+        this->string[1] = '\0';
+        this->len = 1;
         return;
     }
-    char *temp = new (std::nothrow) char[this->len + 2];
-    if (!temp)
+    char *temp;
+    try
+    {
+        temp = new char[this->len + 2];
+    }
+    catch (std::bad_alloc &e)
     {
         std::cout << "Problem allocating memory" << std::endl;
         return;
     }
-    for (int i = 0; i < this->len; i++)
+    for (size_t i = 0; i < this->len; i++)
     {
         temp[i] = this->string[i];
     }
@@ -196,13 +206,17 @@ void MyString::pop_back()
         this->clear();
         return;
     }
-    char *temp = new (std::nothrow) char[this->len];
-    if (!temp)
+    char *temp;
+    try
+    {
+        temp = new char[this->len];
+    }
+    catch (std::bad_alloc &e)
     {
         std::cout << "Problem allocating memory" << std::endl;
         return;
     }
-    for (int i = 0; i < this->len - 1; i++)
+    for (size_t i = 0; i < this->len - 1; i++)
     {
         temp[i] = this->string[i];
     }
@@ -249,27 +263,40 @@ MyString &MyString::operator+=(const MyString &rhs)
     }
 
     size_t oldLen = this->len;
-    char *temp = new (std::nothrow) char[this->len];
-    if (!temp)
+    char *temp;
+    try
+    {
+        temp = new char[this->len];
+    }
+    catch (std::bad_alloc &e)
     {
         std::cout << "Problem allocating memory" << std::endl;
         return *this;
     }
+
     strcpy(temp, this->string);
     this->len += rhs.len;
     delete[] this->string;
-    this->string = new (std::nothrow) char[this->len];
-    if (this->string)
+    try
     {
-        for (int i = 0; i < oldLen; i++)
-        {
-            this->string[i] = temp[i];
-        }
-        for (int j = 0; j < rhs.len; j++)
-        {
-            this->string[oldLen + j] = rhs[j];
-        }
+        this->string = new char[this->len];
     }
+    catch (std::bad_alloc &e)
+    {
+        this->string = new char[oldLen];
+        stpcpy(this->string, temp);
+        return *this;
+    }
+
+    for (size_t i = 0; i < oldLen; i++)
+    {
+        this->string[i] = temp[i];
+    }
+    for (size_t j = 0; j < rhs.len; j++)
+    {
+        this->string[oldLen + j] = rhs[j];
+    }
+
     delete[] temp;
     return *this;
 }
