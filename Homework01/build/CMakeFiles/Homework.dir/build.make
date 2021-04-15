@@ -83,46 +83,46 @@ CMakeFiles/Homework.dir/MyString.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Homework.dir/MyString.cpp.s"
 	/bin/clang++-10 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sonya/Uni/OOP/OOP/Homework01/MyString.cpp -o CMakeFiles/Homework.dir/MyString.cpp.s
 
-CMakeFiles/Homework.dir/catch2.cpp.o: CMakeFiles/Homework.dir/flags.make
-CMakeFiles/Homework.dir/catch2.cpp.o: ../catch2.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sonya/Uni/OOP/OOP/Homework01/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Homework.dir/catch2.cpp.o"
-	/bin/clang++-10  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Homework.dir/catch2.cpp.o -c /home/sonya/Uni/OOP/OOP/Homework01/catch2.cpp
+CMakeFiles/Homework.dir/Vehicle.cpp.o: CMakeFiles/Homework.dir/flags.make
+CMakeFiles/Homework.dir/Vehicle.cpp.o: ../Vehicle.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sonya/Uni/OOP/OOP/Homework01/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Homework.dir/Vehicle.cpp.o"
+	/bin/clang++-10  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Homework.dir/Vehicle.cpp.o -c /home/sonya/Uni/OOP/OOP/Homework01/Vehicle.cpp
 
-CMakeFiles/Homework.dir/catch2.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Homework.dir/catch2.cpp.i"
-	/bin/clang++-10 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sonya/Uni/OOP/OOP/Homework01/catch2.cpp > CMakeFiles/Homework.dir/catch2.cpp.i
+CMakeFiles/Homework.dir/Vehicle.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Homework.dir/Vehicle.cpp.i"
+	/bin/clang++-10 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sonya/Uni/OOP/OOP/Homework01/Vehicle.cpp > CMakeFiles/Homework.dir/Vehicle.cpp.i
 
-CMakeFiles/Homework.dir/catch2.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Homework.dir/catch2.cpp.s"
-	/bin/clang++-10 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sonya/Uni/OOP/OOP/Homework01/catch2.cpp -o CMakeFiles/Homework.dir/catch2.cpp.s
+CMakeFiles/Homework.dir/Vehicle.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Homework.dir/Vehicle.cpp.s"
+	/bin/clang++-10 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sonya/Uni/OOP/OOP/Homework01/Vehicle.cpp -o CMakeFiles/Homework.dir/Vehicle.cpp.s
 
-CMakeFiles/Homework.dir/tests_MyString.cpp.o: CMakeFiles/Homework.dir/flags.make
-CMakeFiles/Homework.dir/tests_MyString.cpp.o: ../tests_MyString.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sonya/Uni/OOP/OOP/Homework01/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Homework.dir/tests_MyString.cpp.o"
-	/bin/clang++-10  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Homework.dir/tests_MyString.cpp.o -c /home/sonya/Uni/OOP/OOP/Homework01/tests_MyString.cpp
+CMakeFiles/Homework.dir/VehicleAllocator.cpp.o: CMakeFiles/Homework.dir/flags.make
+CMakeFiles/Homework.dir/VehicleAllocator.cpp.o: ../VehicleAllocator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sonya/Uni/OOP/OOP/Homework01/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Homework.dir/VehicleAllocator.cpp.o"
+	/bin/clang++-10  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Homework.dir/VehicleAllocator.cpp.o -c /home/sonya/Uni/OOP/OOP/Homework01/VehicleAllocator.cpp
 
-CMakeFiles/Homework.dir/tests_MyString.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Homework.dir/tests_MyString.cpp.i"
-	/bin/clang++-10 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sonya/Uni/OOP/OOP/Homework01/tests_MyString.cpp > CMakeFiles/Homework.dir/tests_MyString.cpp.i
+CMakeFiles/Homework.dir/VehicleAllocator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Homework.dir/VehicleAllocator.cpp.i"
+	/bin/clang++-10 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sonya/Uni/OOP/OOP/Homework01/VehicleAllocator.cpp > CMakeFiles/Homework.dir/VehicleAllocator.cpp.i
 
-CMakeFiles/Homework.dir/tests_MyString.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Homework.dir/tests_MyString.cpp.s"
-	/bin/clang++-10 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sonya/Uni/OOP/OOP/Homework01/tests_MyString.cpp -o CMakeFiles/Homework.dir/tests_MyString.cpp.s
+CMakeFiles/Homework.dir/VehicleAllocator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Homework.dir/VehicleAllocator.cpp.s"
+	/bin/clang++-10 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sonya/Uni/OOP/OOP/Homework01/VehicleAllocator.cpp -o CMakeFiles/Homework.dir/VehicleAllocator.cpp.s
 
 # Object files for target Homework
 Homework_OBJECTS = \
 "CMakeFiles/Homework.dir/main.cpp.o" \
 "CMakeFiles/Homework.dir/MyString.cpp.o" \
-"CMakeFiles/Homework.dir/catch2.cpp.o" \
-"CMakeFiles/Homework.dir/tests_MyString.cpp.o"
+"CMakeFiles/Homework.dir/Vehicle.cpp.o" \
+"CMakeFiles/Homework.dir/VehicleAllocator.cpp.o"
 
 # External object files for target Homework
 Homework_EXTERNAL_OBJECTS =
 
 Homework: CMakeFiles/Homework.dir/main.cpp.o
 Homework: CMakeFiles/Homework.dir/MyString.cpp.o
-Homework: CMakeFiles/Homework.dir/catch2.cpp.o
-Homework: CMakeFiles/Homework.dir/tests_MyString.cpp.o
+Homework: CMakeFiles/Homework.dir/Vehicle.cpp.o
+Homework: CMakeFiles/Homework.dir/VehicleAllocator.cpp.o
 Homework: CMakeFiles/Homework.dir/build.make
 Homework: CMakeFiles/Homework.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sonya/Uni/OOP/OOP/Homework01/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Homework"

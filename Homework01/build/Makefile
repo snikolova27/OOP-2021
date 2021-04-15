@@ -547,32 +547,59 @@ MyString.cpp.s:
 	$(MAKE) -f CMakeFiles/Homework.dir/build.make CMakeFiles/Homework.dir/MyString.cpp.s
 .PHONY : MyString.cpp.s
 
-catch2.o: catch2.cpp.o
+Vehicle.o: Vehicle.cpp.o
 
-.PHONY : catch2.o
+.PHONY : Vehicle.o
 
 # target to build an object file
-catch2.cpp.o:
-	$(MAKE) -f CMakeFiles/Homework.dir/build.make CMakeFiles/Homework.dir/catch2.cpp.o
-.PHONY : catch2.cpp.o
+Vehicle.cpp.o:
+	$(MAKE) -f CMakeFiles/Homework.dir/build.make CMakeFiles/Homework.dir/Vehicle.cpp.o
+.PHONY : Vehicle.cpp.o
 
-catch2.i: catch2.cpp.i
+Vehicle.i: Vehicle.cpp.i
 
-.PHONY : catch2.i
+.PHONY : Vehicle.i
 
 # target to preprocess a source file
-catch2.cpp.i:
-	$(MAKE) -f CMakeFiles/Homework.dir/build.make CMakeFiles/Homework.dir/catch2.cpp.i
-.PHONY : catch2.cpp.i
+Vehicle.cpp.i:
+	$(MAKE) -f CMakeFiles/Homework.dir/build.make CMakeFiles/Homework.dir/Vehicle.cpp.i
+.PHONY : Vehicle.cpp.i
 
-catch2.s: catch2.cpp.s
+Vehicle.s: Vehicle.cpp.s
 
-.PHONY : catch2.s
+.PHONY : Vehicle.s
 
 # target to generate assembly for a file
-catch2.cpp.s:
-	$(MAKE) -f CMakeFiles/Homework.dir/build.make CMakeFiles/Homework.dir/catch2.cpp.s
-.PHONY : catch2.cpp.s
+Vehicle.cpp.s:
+	$(MAKE) -f CMakeFiles/Homework.dir/build.make CMakeFiles/Homework.dir/Vehicle.cpp.s
+.PHONY : Vehicle.cpp.s
+
+VehicleAllocator.o: VehicleAllocator.cpp.o
+
+.PHONY : VehicleAllocator.o
+
+# target to build an object file
+VehicleAllocator.cpp.o:
+	$(MAKE) -f CMakeFiles/Homework.dir/build.make CMakeFiles/Homework.dir/VehicleAllocator.cpp.o
+.PHONY : VehicleAllocator.cpp.o
+
+VehicleAllocator.i: VehicleAllocator.cpp.i
+
+.PHONY : VehicleAllocator.i
+
+# target to preprocess a source file
+VehicleAllocator.cpp.i:
+	$(MAKE) -f CMakeFiles/Homework.dir/build.make CMakeFiles/Homework.dir/VehicleAllocator.cpp.i
+.PHONY : VehicleAllocator.cpp.i
+
+VehicleAllocator.s: VehicleAllocator.cpp.s
+
+.PHONY : VehicleAllocator.s
+
+# target to generate assembly for a file
+VehicleAllocator.cpp.s:
+	$(MAKE) -f CMakeFiles/Homework.dir/build.make CMakeFiles/Homework.dir/VehicleAllocator.cpp.s
+.PHONY : VehicleAllocator.cpp.s
 
 main.o: main.cpp.o
 
@@ -600,33 +627,6 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) -f CMakeFiles/Homework.dir/build.make CMakeFiles/Homework.dir/main.cpp.s
 .PHONY : main.cpp.s
-
-tests_MyString.o: tests_MyString.cpp.o
-
-.PHONY : tests_MyString.o
-
-# target to build an object file
-tests_MyString.cpp.o:
-	$(MAKE) -f CMakeFiles/Homework.dir/build.make CMakeFiles/Homework.dir/tests_MyString.cpp.o
-.PHONY : tests_MyString.cpp.o
-
-tests_MyString.i: tests_MyString.cpp.i
-
-.PHONY : tests_MyString.i
-
-# target to preprocess a source file
-tests_MyString.cpp.i:
-	$(MAKE) -f CMakeFiles/Homework.dir/build.make CMakeFiles/Homework.dir/tests_MyString.cpp.i
-.PHONY : tests_MyString.cpp.i
-
-tests_MyString.s: tests_MyString.cpp.s
-
-.PHONY : tests_MyString.s
-
-# target to generate assembly for a file
-tests_MyString.cpp.s:
-	$(MAKE) -f CMakeFiles/Homework.dir/build.make CMakeFiles/Homework.dir/tests_MyString.cpp.s
-.PHONY : tests_MyString.cpp.s
 
 # Help Target
 help:
@@ -671,15 +671,15 @@ help:
 	@echo "... MyString.o"
 	@echo "... MyString.i"
 	@echo "... MyString.s"
-	@echo "... catch2.o"
-	@echo "... catch2.i"
-	@echo "... catch2.s"
+	@echo "... Vehicle.o"
+	@echo "... Vehicle.i"
+	@echo "... Vehicle.s"
+	@echo "... VehicleAllocator.o"
+	@echo "... VehicleAllocator.i"
+	@echo "... VehicleAllocator.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... tests_MyString.o"
-	@echo "... tests_MyString.i"
-	@echo "... tests_MyString.s"
 .PHONY : help
 
 

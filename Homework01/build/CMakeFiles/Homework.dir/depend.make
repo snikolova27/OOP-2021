@@ -4,14 +4,17 @@
 CMakeFiles/Homework.dir/MyString.cpp.o: ../MyString.cpp
 CMakeFiles/Homework.dir/MyString.cpp.o: ../MyString.h
 
-CMakeFiles/Homework.dir/catch2.cpp.o: ../catch2.cpp
-CMakeFiles/Homework.dir/catch2.cpp.o: ../catch2.hpp
+CMakeFiles/Homework.dir/Vehicle.cpp.o: ../MyString.h
+CMakeFiles/Homework.dir/Vehicle.cpp.o: ../Vehicle.cpp
+CMakeFiles/Homework.dir/Vehicle.cpp.o: ../Vehicle.h
+
+CMakeFiles/Homework.dir/VehicleAllocator.cpp.o: ../MyString.h
+CMakeFiles/Homework.dir/VehicleAllocator.cpp.o: ../Vehicle.h
+CMakeFiles/Homework.dir/VehicleAllocator.cpp.o: ../VehicleAllocator.cpp
+CMakeFiles/Homework.dir/VehicleAllocator.cpp.o: ../VehicleAllocator.h
 
 CMakeFiles/Homework.dir/main.cpp.o: ../MyString.h
 CMakeFiles/Homework.dir/main.cpp.o: ../Vehicle.h
+CMakeFiles/Homework.dir/main.cpp.o: ../VehicleAllocator.h
 CMakeFiles/Homework.dir/main.cpp.o: ../main.cpp
-
-CMakeFiles/Homework.dir/tests_MyString.cpp.o: ../MyString.h
-CMakeFiles/Homework.dir/tests_MyString.cpp.o: ../catch2.hpp
-CMakeFiles/Homework.dir/tests_MyString.cpp.o: ../tests_MyString.cpp
 

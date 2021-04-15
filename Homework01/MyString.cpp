@@ -9,8 +9,9 @@ void MyString::deallocateMemory()
     if (this->string)
     {
         delete[] this->string;
-        this->string = nullptr;
+        //this->string = nullptr;
     }
+    
 }
 
 char *MyString::copyDynStr(const char *str)
@@ -157,6 +158,7 @@ void MyString::clear()
 {
     this->deallocateMemory();
     this->len = 0;
+    this->string=nullptr;
 }
 void MyString::push_back(char c)
 {

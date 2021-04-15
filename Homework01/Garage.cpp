@@ -8,9 +8,11 @@ void Garage::deallocate()
 {
     if (this->vehicles)
     {
-        for (size_t i = 0; i < this->capacity; i++)
+        size_t i = 0;
+        while (i < this->capacity)
         {
             this->vehicles[i] = nullptr;
+            i++;
         }
         delete[] this->vehicles;
     }
@@ -34,10 +36,11 @@ void Garage::copy(const Garage &other)
         std::cout << "Problem allocating memory" << std::endl;
         return;
     }
-
-    for (int i = 0; i < other.capacity; i++)
+    size_t i = 0;
+    while (i < other.capacity)
     {
         this->vehicles[i] = other.vehicles[i];
+        i++;
     }
     this->used = other.used;
     this->capacity = other.capacity;
@@ -61,9 +64,11 @@ Garage::Garage(std::size_t size)
         this->used = 0;
         this->cntOfVehicles = 0;
 
-        for (size_t i = 0; i < this->capacity; i++)
+        size_t i = 0;
+        while (i < this->capacity)
         {
             vehicles[i] = nullptr;
+            i++;
         }
         std::cout << "Garage with a capacity of " << size << "has been created." << std::endl;
     }
@@ -132,13 +137,15 @@ void Garage::erase(const char *_licensePlate)
     }
 
     int searchIdx = -1;
-    for (size_t i = 0; i < this->cntOfVehicles; i++)
+    size_t i = 0;
+    while (i < this->cntOfVehicles)
     {
         if (strcmp(_licensePlate, this->vehicles[i]->registration()) == 0)
         {
             searchIdx = i;
             break;
         }
+        i++;
     }
     if (searchIdx == -1)
     {
@@ -177,9 +184,11 @@ void Garage::clear()
     {
         return;
     }
-    for (size_t i = 0; i < this->capacity; i++)
+    size_t i = 0;
+    while (i < this->capacity)
     {
         this->vehicles[i] = nullptr;
+        i++;
     }
     this->used = 0;
     this->cntOfVehicles = 0;
@@ -192,15 +201,17 @@ const Vehicle *Garage::find(const char *_licensePlate) const
     {
         return nullptr;
     }
-    int searchIdx = -1;
+    int searchIdx = -1; //invalid index
 
-    for (size_t i = 0; i < this->cntOfVehicles; i++)
+    size_t i = 0;
+    while (i < this->cntOfVehicles)
     {
         if (strcmp(_licensePlate, this->vehicles[i]->registration()) == 0)
         {
             searchIdx = i;
             break;
         }
+        i++;
     }
     if (searchIdx == -1) //means there isn't a car with such license plate in the garage
     {
@@ -224,30 +235,30 @@ const Vehicle &Garage::operator[](std::size_t pos) const //assert pos
     assert(pos < this->cntOfVehicles);
     return *(this->vehicles[pos]);
 }
-std::ostream &operator<<(std::ostream &out, const Garage &garage) //used for easier printing of the contentes of the garage
+void Garage::print()
 {
-    std::cout << "Capacity of garage: " << garage.capacity << std::endl;
-    std::cout << "Current count of vehicles inside the garage: " << garage.cntOfVehicles << std::endl;
-    std::cout << "Current ocupied space: " << garage.used << std::endl;
+    std::cout << "Garaga capacity: " << this->capacity << std::endl;
+    std::cout << "Current count of vehicles inside the garage: " << this->cntOfVehicles << std::endl;
+    std::cout << "Current ocupied space: " << this->used << std::endl;
 
-    if (!garage.empty())
+    if (!this->empty())
     {
         std::cout << std::endl;
 
-        if (garage.capacity - garage.used > 0)
+        if (this->capacity - this->used > 0)
         {
-            std::cout << "There are " << garage.capacity - garage.used << " free parking space(s) in the garage" << std::endl;
+            std::cout << "There are " << this->capacity - this->used << " free parking space(s) in the garage" << std::endl;
         }
 
         std::cout << "============="
                   << "Vehichles parked in the garage"
                   << "=============" << std::endl;
 
-        for (size_t i = 0; i < garage.cntOfVehicles; i++)
+        size_t i = 0;
+        while (i < this->cntOfVehicles)
         {
-            std::cout << "Vehicle " << i + 1 << std::endl;
-            std::cout << *(garage.vehicles[i]);
+            std::cout << "Vehicle " << i + 1 << " with license plate " << this->vehicles[i]->registration() << std::endl;
+            i++;
         }
     }
-    return out;
 }

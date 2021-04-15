@@ -28,13 +28,13 @@ public:
     const Vehicle &at(std::size_t pos) const;
     bool empty() const;
     void clear();
+    void print();
     const Vehicle *find(const char *_licensePlate) const;
 
     //----------- operator overloading ------------
     Garage &operator=(const Garage &other);
     const Vehicle &operator[](std::size_t pos) const; //assert pos
-    friend std::ostream &operator<<(std::ostream &out, const Garage &garage);
-
+    
     //------------ destructor ------------
     ~Garage();
 };
