@@ -247,9 +247,9 @@ void Garage::print()
         }
 
         std::cout << std::endl;
-        std::cout << "============="
+        std::cout << "============= "
                   << "Vehichles parked in the garage"
-                  << "=============" << std::endl;
+                  << " =============" << std::endl;
         std::cout << std::endl;
 
         size_t i = 0;
