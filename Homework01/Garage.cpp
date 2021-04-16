@@ -21,7 +21,7 @@ void Garage::copy(const Garage &other)
 {
     if (other.vehicles == nullptr)
     {
-        this->vehicles == nullptr;
+        this->vehicles = other.vehicles;
         this->used = 0;
         this->capacity = 0;
         this->cntOfVehicles = 0;
@@ -45,6 +45,11 @@ void Garage::copy(const Garage &other)
     this->used = other.used;
     this->capacity = other.capacity;
     this->cntOfVehicles = other.cntOfVehicles;
+}
+//------------ constructors ------------
+Garage::Garage(const Garage &other)
+{
+    this->copy(other);
 }
 Garage::Garage(std::size_t size)
 {
@@ -70,7 +75,7 @@ Garage::Garage(std::size_t size)
             vehicles[i] = nullptr;
             i++;
         }
-        std::cout << "Garage with a capacity of " << size << "has been created." << std::endl;
+        std::cout << "Garage with a capacity of " << size << " has been created." << std::endl;
     }
     else
     {
@@ -80,21 +85,12 @@ Garage::Garage(std::size_t size)
         this->cntOfVehicles = 0;
     }
 }
-
-//------------ constructors ------------
-Garage::Garage(const Garage &other)
-{
-    this->copy(other);
-}
+//------------ getters ------------
 std::size_t Garage::getSize() const
 {
     return this->cntOfVehicles;
 }
-//------------ destructor ------------
-Garage::~Garage()
-{
-    this->deallocate();
-}
+
 //------------ class functions ------------
 void Garage ::insert(Vehicle &v) //strong exception guarantee
 {
@@ -126,7 +122,7 @@ void Garage ::insert(Vehicle &v) //strong exception guarantee
     this->vehicles[this->cntOfVehicles++] = &v;
     this->used += v.space();
 
-    std::cout << "Vehicle has been added to the garage" << std::endl;
+    std::cout << "Vehicle with license plate " << v.registration() << " has been added to the garage" << std::endl;
 }
 void Garage::erase(const char *_licensePlate)
 {
@@ -250,9 +246,11 @@ void Garage::print()
             std::cout << "There are " << this->capacity - this->used << " free parking space(s) in the garage" << std::endl;
         }
 
+        std::cout << std::endl;
         std::cout << "============="
                   << "Vehichles parked in the garage"
                   << "=============" << std::endl;
+        std::cout << std::endl;
 
         size_t i = 0;
         while (i < this->cntOfVehicles)
@@ -261,4 +259,9 @@ void Garage::print()
             i++;
         }
     }
+}
+//------------ destructor ------------
+Garage::~Garage()
+{
+    this->deallocate();
 }

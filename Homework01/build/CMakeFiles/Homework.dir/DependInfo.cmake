@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/sonya/Uni/OOP/OOP/Homework01/Garage.cpp" "/home/sonya/Uni/OOP/OOP/Homework01/build/CMakeFiles/Homework.dir/Garage.cpp.o"
   "/home/sonya/Uni/OOP/OOP/Homework01/MyString.cpp" "/home/sonya/Uni/OOP/OOP/Homework01/build/CMakeFiles/Homework.dir/MyString.cpp.o"
   "/home/sonya/Uni/OOP/OOP/Homework01/Vehicle.cpp" "/home/sonya/Uni/OOP/OOP/Homework01/build/CMakeFiles/Homework.dir/Vehicle.cpp.o"
   "/home/sonya/Uni/OOP/OOP/Homework01/VehicleAllocator.cpp" "/home/sonya/Uni/OOP/OOP/Homework01/build/CMakeFiles/Homework.dir/VehicleAllocator.cpp.o"

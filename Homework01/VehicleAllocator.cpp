@@ -188,7 +188,7 @@ void VehicleAllocator::deleteVehicle(const char *_licensePlate)
             this->vehicles[this->used - 1] = nullptr;
             this->used -= 1;
 
-            std::cout << "Vehicle with license plate" << _licensePlate << "has been deleted" << std::endl;
+            std::cout << "Vehicle with license plate " << _licensePlate << " has been deleted" << std::endl;
             return;
         }
         i++;

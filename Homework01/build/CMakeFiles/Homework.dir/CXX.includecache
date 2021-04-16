@@ -6,15 +6,47 @@
 
 #IncludeRegexTransform: 
 
-/home/sonya/Uni/OOP/OOP/Homework01/MyString.cpp
-MyString.h
-/home/sonya/Uni/OOP/OOP/Homework01/MyString.h
+/home/sonya/Uni/OOP/OOP/Homework01/Garage.cpp
+Garage.h
+/home/sonya/Uni/OOP/OOP/Homework01/Garage.h
 cstring
 -
 cassert
 -
 
+/home/sonya/Uni/OOP/OOP/Homework01/Garage.h
+Vehicle.h
+/home/sonya/Uni/OOP/OOP/Homework01/Vehicle.h
+
 /home/sonya/Uni/OOP/OOP/Homework01/MyString.h
 iostream
+-
+
+/home/sonya/Uni/OOP/OOP/Homework01/Vehicle.h
+MyString.h
+/home/sonya/Uni/OOP/OOP/Homework01/MyString.h
+
+/home/sonya/Uni/OOP/OOP/Homework01/VehicleAllocator.cpp
+VehicleAllocator.h
+/home/sonya/Uni/OOP/OOP/Homework01/VehicleAllocator.h
+cstring
+-
+
+/home/sonya/Uni/OOP/OOP/Homework01/VehicleAllocator.h
+Vehicle.h
+/home/sonya/Uni/OOP/OOP/Homework01/Vehicle.h
+
+/home/sonya/Uni/OOP/OOP/Homework01/main.cpp
+MyString.h
+/home/sonya/Uni/OOP/OOP/Homework01/MyString.h
+Vehicle.h
+/home/sonya/Uni/OOP/OOP/Homework01/Vehicle.h
+Garage.h
+/home/sonya/Uni/OOP/OOP/Homework01/Garage.h
+VehicleAllocator.h
+/home/sonya/Uni/OOP/OOP/Homework01/VehicleAllocator.h
+iostream
+-
+cstring
 -
 

@@ -18,5 +18,10 @@
   "directory": "/home/sonya/Uni/OOP/OOP/Homework01/build",
   "command": "/bin/clang++-10     -fsanitize=address,undefined -g   -o CMakeFiles/Homework.dir/VehicleAllocator.cpp.o -c /home/sonya/Uni/OOP/OOP/Homework01/VehicleAllocator.cpp",
   "file": "/home/sonya/Uni/OOP/OOP/Homework01/VehicleAllocator.cpp"
+},
+{
+  "directory": "/home/sonya/Uni/OOP/OOP/Homework01/build",
+  "command": "/bin/clang++-10     -fsanitize=address,undefined -g   -o CMakeFiles/Homework.dir/Garage.cpp.o -c /home/sonya/Uni/OOP/OOP/Homework01/Garage.cpp",
+  "file": "/home/sonya/Uni/OOP/OOP/Homework01/Garage.cpp"
 }
 ]

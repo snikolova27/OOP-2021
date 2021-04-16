@@ -520,6 +520,33 @@ ContinuousSubmit/fast:
 	$(MAKE) -f CMakeFiles/ContinuousSubmit.dir/build.make CMakeFiles/ContinuousSubmit.dir/build
 .PHONY : ContinuousSubmit/fast
 
+Garage.o: Garage.cpp.o
+
+.PHONY : Garage.o
+
+# target to build an object file
+Garage.cpp.o:
+	$(MAKE) -f CMakeFiles/Homework.dir/build.make CMakeFiles/Homework.dir/Garage.cpp.o
+.PHONY : Garage.cpp.o
+
+Garage.i: Garage.cpp.i
+
+.PHONY : Garage.i
+
+# target to preprocess a source file
+Garage.cpp.i:
+	$(MAKE) -f CMakeFiles/Homework.dir/build.make CMakeFiles/Homework.dir/Garage.cpp.i
+.PHONY : Garage.cpp.i
+
+Garage.s: Garage.cpp.s
+
+.PHONY : Garage.s
+
+# target to generate assembly for a file
+Garage.cpp.s:
+	$(MAKE) -f CMakeFiles/Homework.dir/build.make CMakeFiles/Homework.dir/Garage.cpp.s
+.PHONY : Garage.cpp.s
+
 MyString.o: MyString.cpp.o
 
 .PHONY : MyString.o
@@ -668,6 +695,9 @@ help:
 	@echo "... ContinuousMemCheck"
 	@echo "... ContinuousTest"
 	@echo "... ContinuousSubmit"
+	@echo "... Garage.o"
+	@echo "... Garage.i"
+	@echo "... Garage.s"
 	@echo "... MyString.o"
 	@echo "... MyString.i"
 	@echo "... MyString.s"

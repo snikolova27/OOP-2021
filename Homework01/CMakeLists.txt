@@ -4,7 +4,7 @@ project(Homework VERSION 0.1.0)
 include(CTest)
 enable_testing()
 
-add_executable(Homework main.cpp MyString.cpp Vehicle.cpp VehicleAllocator.cpp)
+add_executable(Homework main.cpp MyString.cpp Vehicle.cpp VehicleAllocator.cpp Garage.cpp)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address,undefined") 
 

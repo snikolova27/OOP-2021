@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Homework.dir/Garage.cpp.o"
   "CMakeFiles/Homework.dir/MyString.cpp.o"
   "CMakeFiles/Homework.dir/Vehicle.cpp.o"
   "CMakeFiles/Homework.dir/VehicleAllocator.cpp.o"
