@@ -1,9 +1,10 @@
+#include <iostream>
+#include <cstring>
 #include "MyString.h"
 #include "Vehicle.h"
 #include "Garage.h"
 #include "VehicleAllocator.h"
-#include <iostream>
-#include <cstring>
+
 const int MAX_LICENSE_PLATE = 100;
 const int MAX_DESCRIPTION = 150;
 

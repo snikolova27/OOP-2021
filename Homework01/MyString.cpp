@@ -189,9 +189,11 @@ void MyString::push_back(char c)
         std::cout << "Problem allocating memory" << std::endl;
         return;
     }
-    for (size_t i = 0; i < this->len; i++)
+    size_t i = 0;
+    while ( i < this->len)
     {
         temp[i] = this->string[i];
+        i++;
     }
     temp[this->len] = c;
     temp[this->len + 1] = '\0';
@@ -218,9 +220,11 @@ void MyString::pop_back()
         std::cout << "Problem allocating memory" << std::endl;
         return;
     }
-    for (size_t i = 0; i < this->len - 1; i++)
+    size_t i = 0;
+    while(i < this->len - 1)
     {
         temp[i] = this->string[i];
+        i++;
     }
     temp[len - 1] = '\0';
     this->setString(temp);
@@ -289,14 +293,17 @@ MyString &MyString::operator+=(const MyString &rhs)
         stpcpy(this->string, temp);
         return *this;
     }
-
-    for (size_t i = 0; i < oldLen; i++)
+    size_t i = 0;
+    while ( i < oldLen)
     {
         this->string[i] = temp[i];
+        i++;
     }
-    for (size_t j = 0; j < rhs.len; j++)
+    size_t j = 0;
+    while (j < rhs.len)
     {
         this->string[oldLen + j] = rhs[j];
+        j++;
     }
 
     delete[] temp;

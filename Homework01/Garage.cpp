@@ -101,9 +101,9 @@ void Garage ::insert(Vehicle &v) //strong exception guarantee
             throw std::invalid_argument("There is already a vehicle in the garage with such license plate");
         }
     }
-    catch (const std::exception &e)
+    catch (std::invalid_argument &e)
     {
-        std::cerr << e.what() << '\n';
+        std::cout << e.what() << std::endl;
         return;
     }
     try
@@ -113,9 +113,9 @@ void Garage ::insert(Vehicle &v) //strong exception guarantee
             throw std::overflow_error("There isn't enough space left in the garage for this vehicle");
         }
     }
-    catch (const std::exception &e)
+    catch (std::overflow_error &e)
     {
-        std::cerr << e.what() << '\n';
+        std::cout << e.what() << std::endl;
         return;
     }
 
