@@ -233,7 +233,7 @@ const Vehicle &Garage::operator[](std::size_t pos) const //assert pos
 }
 void Garage::print()
 {
-    std::cout << "Garaga capacity: " << this->capacity << std::endl;
+    std::cout << "Garage capacity: " << this->capacity << std::endl;
     std::cout << "Current count of vehicles inside the garage: " << this->cntOfVehicles << std::endl;
     std::cout << "Current ocupied space: " << this->used << std::endl;
 
