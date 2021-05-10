@@ -26,6 +26,7 @@
         "thread": "cpp",
         "regex": "cpp",
         "tuple": "cpp",
-        "variant": "cpp"
+        "variant": "cpp",
+        "type_traits": "cpp"
     }
 }

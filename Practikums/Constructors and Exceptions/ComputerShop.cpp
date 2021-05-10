@@ -41,7 +41,7 @@ const int ComputerShop ::getSize() const
 {
     return this->size;
 }
-void ComputerShop::addComputer( Computer computer)
+void ComputerShop::addComputer( Computer& computer)
 {
     if(findComputer(computer.getBrand()))
     {

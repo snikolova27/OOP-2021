@@ -7,7 +7,7 @@ int main()
     FacultyMember fm("Sam", 214, 4521.2);
     fm.print();
 
-    // write
+    // save in file
     std::string fileName;
     std::cout << "Enter output file name: ";
     getline(std::cin, fileName);
@@ -15,7 +15,7 @@ int main()
     fm.saveInFile(fileTo);
     fileTo.close();
 
-    // read
+    // read from file
     std::string fileName2;
     std::cout << "Enter input file name: ";
     getline(std::cin, fileName2);
