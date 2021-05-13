@@ -11,6 +11,7 @@ private:
 
     void copy(const Ticket &other);
     void deallocate();
+
     bool validateName(const char* _name);
     bool validatePhone(const char* _validate);
 
@@ -26,6 +27,9 @@ public:
     Ticket();
     Ticket(const char *_name, const char *_phoneNum, const int _uniqueNum);
     Ticket(const Ticket &other);
+
+     Ticket& operator = (const Ticket& other);
+     
     friend std::istream &operator>>(std::istream &in, Ticket &ticket);
     friend std::ostream &operator<<(std::ostream &out, const Ticket &ticket);
 

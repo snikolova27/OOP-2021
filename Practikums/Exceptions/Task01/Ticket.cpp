@@ -4,21 +4,46 @@
 
 void Ticket::copy(const Ticket &other)
 {
-    delete[] this->name;
-    this->name = new (std::nothrow) char[strlen(other.name)];
-    if (this->name)
+    try
     {
-        strcpy(this->name, other.name);
+        validateName(other.name);
     }
-    delete[] this->phoneNum;
-    this->phoneNum = new (std::nothrow) char[strlen(other.phoneNum)];
-    if (this->phoneNum)
+    catch (const std::exception &e)
     {
-        strcpy(this->phoneNum, other.phoneNum);
+        std::cerr << e.what() << '\n';
     }
+    try
+    {
+        this->name = new char[strlen(other.name) + 1];
+    }
+
+    catch (const std::exception &e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+    strcpy(this->name, other.name);
+
+    try
+    {
+        validatePhone(other.phoneNum);
+    }
+
+    catch (const std::exception &e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+    try
+    {
+        this->phoneNum = new char[strlen(other.phoneNum) + 1];
+    }
+    catch (const std::exception &e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+    strcpy(this->phoneNum, other.phoneNum);
+
     this->uniqueNum = other.uniqueNum;
 }
-
 void Ticket::deallocate()
 {
     if (this->name)
@@ -29,6 +54,9 @@ void Ticket::deallocate()
     {
         delete[] this->phoneNum;
     }
+    this->name = nullptr;
+    this->phoneNum = nullptr;
+    this->uniqueNum = 0;
 }
 
 bool Ticket::validateName(const char *_name)
@@ -70,7 +98,7 @@ void Ticket::setName(const char *_name)
 void Ticket::setPhoneNum(const char *_phone)
 {
     delete[] this->phoneNum;
-    if(!validatePhone(_phone))
+    if (!validatePhone(_phone))
     {
         throw std::length_error("Invalid phone input");
     }
@@ -125,6 +153,15 @@ Ticket::~Ticket()
     deallocate();
 }
 
+Ticket &Ticket ::operator=(const Ticket &other)
+{
+    if (this != &other)
+    {
+        this->deallocate();
+        copy(other);
+    }
+    return *this;
+}
 std::istream &operator>>(std::istream &in, Ticket &ticket)
 {
     ticket.deallocate();
@@ -163,12 +200,13 @@ std::istream &operator>>(std::istream &in, Ticket &ticket)
 
     return in;
 }
-std::ostream &operator<<(std::ostream &in, Ticket &ticket)
+std::ostream &operator<<(std::ostream &out, Ticket &ticket)
 {
-    std::cout << "\t" << "Ticket information" << std::endl;
-    std::cout << "Name: " << ticket.getName() << std::endl;
-    std::cout << "Phone number: " << ticket.getPhone() << std::endl;
-    std::cout << "Unique number: " << ticket.getUniqueNum() << std::endl;
+    out << "\t"
+        << "Ticket information" << std::endl;
+    out << "Name: " << ticket.getName() << std::endl;
+    out << "Phone number: " << ticket.getPhone() << std::endl;
+    out << "Unique number: " << ticket.getUniqueNum() << std::endl;
 
-   return in; 
+    return out;
 }
