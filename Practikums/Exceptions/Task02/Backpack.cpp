@@ -91,7 +91,7 @@ void Backpack::add(const Item &item)
         newItems[i] = this->items[i];
     }
 
-    if (this > items)
+    if (this -> items)
     {
         delete[] this->items;
     }
