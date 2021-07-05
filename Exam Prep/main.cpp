@@ -24,9 +24,8 @@ Configuration *createConfiguration()
     {
         for (int i = 0; i < cntOfComponents; i++)
         {
-            Utils utils;
             Component *newComponent;
-            newComponent = utils.createComponent();
+            newComponent = Utils::createComponent();
             if (newComponent != nullptr)
             {
 
@@ -53,8 +52,7 @@ int main()
     std::ofstream output;
     std::string fileName;
 
-    Utils utils;
-    utils.printMenu();
+    Utils::printMenu();
 
     while (choice != 'e')
     {
@@ -76,7 +74,7 @@ int main()
             break;
 
         case 'h':
-            utils.printMenu();
+            Utils::printMenu();
             break;
 
         case 'e':
@@ -100,7 +98,8 @@ int main()
                     output << "------------" << std::endl;
                     output << *configs[i] << std::endl;
                     output << configs[i]->price() << std::endl;
-                    output << "============ \n" << std::endl;
+                    output << "============ \n"
+                           << std::endl;
                 }
             }
             output.close();
@@ -113,12 +112,13 @@ int main()
                 std::cout << "Config #" << i + 1 << std::endl;
                 std::cout << "------------" << std::endl;
                 std::cout << *configs[i] << std::endl;
-                std::cout << "============ \n" << std::endl;
+                std::cout << "============ \n"
+                          << std::endl;
             }
             break;
         default:
             std::cout << "Unknown command \n";
-            utils.printMenu();
+            Utils::printMenu();
             break;
         }
     }

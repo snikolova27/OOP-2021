@@ -6,8 +6,8 @@
 class Utils
 {
 public:
-    Component *createComponent();
-    void printMenu();
+    static Component *createComponent();
+    static void printMenu();
 };
 
 #endif
